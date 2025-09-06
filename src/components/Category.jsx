@@ -3,40 +3,40 @@ import { useState } from "react";
 // Imágenes relacionadas a cada categoría (rutas relativas a /public)
 const categoryImages = {
   HERRAMIENTAS: [
-    "/productos/herramienta01.jpeg",
-    "/productos/herramienta02.jpeg",
-    "/productos/herramienta03.jpeg",
-    "/productos/herramienta04.jpeg",
-    "/productos/herramienta05.jpeg",
-    "/productos/herramienta06.jpeg",
-    "/productos/herramienta07.jpeg",
-    "/productos/herramienta08.jpeg",
-    "/productos/herramienta09.jpeg",
-    "/productos/herramienta10.jpeg"
+    "/materiales-ryr/img/productos/herramienta01.jpeg",
+    "/materiales-ryr/img/productos/herramienta02.jpeg",
+    "/materiales-ryr/img/productos/herramienta03.jpeg",
+    "/materiales-ryr/img/productos/herramienta04.jpeg",
+    "/materiales-ryr/img/productos/herramienta05.jpeg",
+    "/materiales-ryr/img/productos/herramienta06.jpeg",
+    "/materiales-ryr/img/productos/herramienta07.jpeg",
+    "/materiales-ryr/img/productos/herramienta08.jpeg",
+    "/materiales-ryr/img/productos/herramienta09.jpeg",
+    "/materiales-ryr/img/productos/herramienta10.jpeg"
   ],
   MADERA: [
-    "/productos/madera01.jpeg",
-    "/productos/madera02.jpeg",
-    "/productos/madera03.jpeg",
-    "/productos/madera04.jpeg",
-    "/productos/madera05.jpeg",
-    "/productos/madera06.jpeg",
-    "/productos/madera07.jpeg",
-    "/productos/madera08.jpeg",
-    "/productos/madera09.jpeg",
-    "/productos/madera10.jpeg"
+    "/materiales-ryr/img/productos/madera01.jpeg",
+    "/materiales-ryr/img/productos/madera02.jpeg",
+    "/materiales-ryr/img/productos/madera03.jpeg",
+    "/materiales-ryr/img/productos/madera04.jpeg",
+    "/materiales-ryr/img/productos/madera05.jpeg",
+    "/materiales-ryr/img/productos/madera06.jpeg",
+    "/materiales-ryr/img/productos/madera07.jpeg",
+    "/materiales-ryr/img/productos/madera08.jpeg",
+    "/materiales-ryr/img/productos/madera09.jpeg",
+    "/materiales-ryr/img/productos/madera10.jpeg"
   ],
   LADRILLO: [
-    "/productos/ladrillo01.jpeg",
-    "/productos/ladrillo02.jpeg",
-    "/productos/ladrillo03.jpeg",
-    "/productos/ladrillo04.jpeg",
-    "/productos/ladrillo05.jpeg",
-    "/productos/ladrillo06.jpeg",
-    "/productos/ladrillo07.jpeg",
-    "/productos/ladrillo08.jpeg",
-    "/productos/ladrillo09.jpeg",
-    "/productos/ladrillo10.jpeg"
+    "/materiales-ryr/img/productos/ladrillo01.jpeg",
+    "/materiales-ryr/img/productos/ladrillo02.jpeg",
+    "/materiales-ryr/img/productos/ladrillo03.jpeg",
+    "/materiales-ryr/img/productos/ladrillo04.jpeg",
+    "/materiales-ryr/img/productos/ladrillo05.jpeg",
+    "/materiales-ryr/img/productos/ladrillo06.jpeg",
+    "/materiales-ryr/img/productos/ladrillo07.jpeg",
+    "/materiales-ryr/img/productos/ladrillo08.jpeg",
+    "/materiales-ryr/img/productos/ladrillo09.jpeg",
+    "/materiales-ryr/img/productos/ladrillo10.jpeg"
   ]
 };
 
@@ -44,23 +44,22 @@ const categories = [
   {
     title: "HERRAMIENTAS",
     subtitle: "Más información",
-    image: "/img/herramienta.jpg",
+    image: "/materiales-ryr/img/herramienta.jpg",
     colSpan: "col-span-2 row-span-2"
   },
   {
     title: "MADERA",
     subtitle: "Más información",
-    image: "/img/madera.jpg",
+    image: "/materiales-ryr/img/madera.jpg",
     colSpan: "col-span-2"
   },
   {
     title: "LADRILLO",
     subtitle: "Más información",
-    image: "/img/ladrillo.jpg",
+    image: "/materiales-ryr/img/ladrillo.jpg",
     colSpan: "col-span-2"
   }
 ];
-
 export default function ShopByCategory() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -68,11 +67,14 @@ export default function ShopByCategory() {
   const openModal = (cat) => {
     setSelectedCategory(cat);
     setModalOpen(true);
+    // Evita scroll en el fondo cuando el modal está abierto
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setModalOpen(false);
     setSelectedCategory(null);
+    document.body.style.overflow = "";
   };
 
   return (
@@ -81,7 +83,7 @@ export default function ShopByCategory() {
         <h2 className="text-2xl font-bold">Categorías principales</h2>
       </div>
 
-      <div className="grid grid-cols-4 grid-rows-2 gap-6">
+      <div className="grid grid-cols-4 grid-rows-2 gap-6 max-md:grid-cols-2 max-md:grid-rows-3">
         {categories.map((cat, index) => (
           <button
             key={index}
@@ -106,24 +108,25 @@ export default function ShopByCategory() {
       {/* Modal */}
       {modalOpen && selectedCategory && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 relative animate-fade-in">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 p-4 sm:p-6 relative animate-fade-in max-h-[90vh] overflow-y-auto">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-2xl text-[#ffb300] hover:text-[#263238] font-bold"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 text-3xl sm:text-2xl text-[#ffb300] hover:text-[#263238] font-bold z-10"
               aria-label="Cerrar"
+              style={{ lineHeight: "1" }}
             >
               &times;
             </button>
             <h2 className="text-2xl font-bold mb-4 text-[#263238] text-center">
               {selectedCategory.title}
             </h2>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center max-sm:flex-col max-sm:items-center">
               {(categoryImages[selectedCategory.title] || []).map((img, idx) => (
                 <img
                   key={idx}
                   src={img}
                   alt={`${selectedCategory.title} ${idx + 1}`}
-                  className="w-40 h-40 object-cover rounded-lg border"
+                  className="w-40 h-40 object-cover rounded-lg border max-sm:w-64 max-sm:h-40"
                 />
               ))}
             </div>
@@ -143,6 +146,12 @@ export default function ShopByCategory() {
         @keyframes fadeIn {
           from { opacity: 0; transform: scale(0.95);}
           to { opacity: 1; transform: scale(1);}
+        }
+        @media (max-width: 640px) {
+          .max-sm\\:flex-col { flex-direction: column !important; }
+          .max-sm\\:items-center { align-items: center !important; }
+          .max-sm\\:w-64 { width: 16rem !important; }
+          .max-sm\\:h-40 { height: 10rem !important; }
         }
       `}</style>
     </section>
