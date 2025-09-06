@@ -1,44 +1,42 @@
 import { useState } from "react";
 
-// Agrega aquí las imágenes relacionadas a cada categoría
+// Imágenes relacionadas a cada categoría (rutas relativas a /public)
 const categoryImages = {
   HERRAMIENTAS: [
-    "/materiales-ryr/productos/herramienta01.jpg",
-    "/materiales-ryr/productos/herramienta02.jpg",
-    "/materiales-ryr/productos/herramienta03.jpg",
-    "/materiales-ryr/productos/herramienta04.jpg",
-    "/materiales-ryr/productos/herramienta05.jpg",
-    "/materiales-ryr/productos/herramienta06.jpg",
-    "/materiales-ryr/productos/herramienta07.jpg",
-    "/materiales-ryr/productos/herramienta08.jpg",
-    "/materiales-ryr/productos/herramienta09.jpg",
-    "/materiales-ryr/productos/herramienta10.jpg"
-
+    "/productos/herramienta01.jpeg",
+    "/productos/herramienta02.jpeg",
+    "/productos/herramienta03.jpeg",
+    "/productos/herramienta04.jpeg",
+    "/productos/herramienta05.jpeg",
+    "/productos/herramienta06.jpeg",
+    "/productos/herramienta07.jpeg",
+    "/productos/herramienta08.jpeg",
+    "/productos/herramienta09.jpeg",
+    "/productos/herramienta10.jpeg"
   ],
   MADERA: [
-    "/materiales-ryr/productos/madera01.jpeg",
-    "/materiales-ryr/productos/madera02.jpeg",
-    "/materiales-ryr/productos/madera03.jpeg",
-    "/materiales-ryr/productos/madera04.jpeg",
-    "/materiales-ryr/productos/madera05.jpeg",
-    "/materiales-ryr/productos/madera06.jpeg",
-    "/materiales-ryr/productos/madera07.jpeg",
-    "/materiales-ryr/productos/madera08.jpeg",
-    "/materiales-ryr/productos/madera09.jpeg",
-    "/materiales-ryr/productos/madera10.jpeg"
-
+    "/productos/madera01.jpeg",
+    "/productos/madera02.jpeg",
+    "/productos/madera03.jpeg",
+    "/productos/madera04.jpeg",
+    "/productos/madera05.jpeg",
+    "/productos/madera06.jpeg",
+    "/productos/madera07.jpeg",
+    "/productos/madera08.jpeg",
+    "/productos/madera09.jpeg",
+    "/productos/madera10.jpeg"
   ],
   LADRILLO: [
-    "/materiales-ryr/productos/ladrillo01.jpeg",
-    "/materiales-ryr/productos/ladrillo02.jpeg",
-    "/materiales-ryr/productos/ladrillo03.jpeg",
-    "/materiales-ryr/productos/ladrillo04.jpeg",
-    "/materiales-ryr/productos/ladrillo05.jpeg",
-    "/materiales-ryr/productos/ladrillo06.jpeg",
-    "/materiales-ryr/productos/ladrillo07.jpeg",
-    "/materiales-ryr/productos/ladrillo08.jpeg",
-    "/materiales-ryr/productos/ladrillo09.jpeg",
-    "/materiales-ryr/productos/ladrillo10.jpeg"
+    "/productos/ladrillo01.jpeg",
+    "/productos/ladrillo02.jpeg",
+    "/productos/ladrillo03.jpeg",
+    "/productos/ladrillo04.jpeg",
+    "/productos/ladrillo05.jpeg",
+    "/productos/ladrillo06.jpeg",
+    "/productos/ladrillo07.jpeg",
+    "/productos/ladrillo08.jpeg",
+    "/productos/ladrillo09.jpeg",
+    "/productos/ladrillo10.jpeg"
   ]
 };
 
@@ -46,19 +44,19 @@ const categories = [
   {
     title: "HERRAMIENTAS",
     subtitle: "Más información",
-    image: "/materiales-ryr/img/herramienta.jpg",
+    image: "/img/herramienta.jpg",
     colSpan: "col-span-2 row-span-2"
   },
   {
     title: "MADERA",
     subtitle: "Más información",
-    image: "/materiales-ryr/img/madera.jpg",
+    image: "/img/madera.jpg",
     colSpan: "col-span-2"
   },
   {
     title: "LADRILLO",
     subtitle: "Más información",
-    image: "/materiales-ryr/img/ladrillo.jpg",
+    image: "/img/ladrillo.jpg",
     colSpan: "col-span-2"
   }
 ];
