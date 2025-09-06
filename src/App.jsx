@@ -7,7 +7,6 @@ import Nosotros from "./pages/Nosotros.jsx";
 import Home from "./pages/Home.jsx";
 
 export default function App() {
-  // Estado para indicar si hay que hacer scroll desde otra página
   const [scrollTarget, setScrollTarget] = useState(null);
 
   return (
@@ -28,6 +27,16 @@ export default function App() {
             <>
               <Header />
               <Nosotros />
+              <Footer />
+            </>
+          }
+        />
+        {/* Ruta comodín para cualquier otra ruta */}
+        <Route
+          path="*"
+          element={
+            <>
+              <Home scrollTarget={scrollTarget} />
               <Footer />
             </>
           }
