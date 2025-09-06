@@ -48,7 +48,7 @@ export default function Home({ scrollTarget }) {
           {/* Misión */}
           <div className="flex flex-col md:flex-row items-center gap-8">
             <img
-              src="/img/mision.png"
+              src="/materiales-ryr/img/mision.png"
               alt="Misión Ferretería"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover"
               style={{ backgroundColor: "#8d6e63" }}
@@ -70,7 +70,7 @@ export default function Home({ scrollTarget }) {
           {/* Visión */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-8">
             <img
-              src="/img/mision.png"
+              src="/materiales-ryr/img/mision.png"
               alt="Visión Ferretería"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover"
               style={{ backgroundColor: "#8d6e63" }}

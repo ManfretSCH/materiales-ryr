@@ -3,19 +3,19 @@ const categories = [
   {
     title: "HERRAMIENTAS",
     subtitle: "Mas informacion",
-    image: "/img/herramienta.jpg", // reemplazar por la imagen real
+    image: "/materiales-ryr/img/herramienta.jpg", // reemplazar por la imagen real
     colSpan: "col-span-2 row-span-2"
   },
   {
     title: "MADERA",
     subtitle: "Mas informacion",
-    image: "/img/madera.jpg", // reemplazar por la imagen real
+    image: "/materiales-ryr/img/madera.jpg", // reemplazar por la imagen real
     colSpan: "col-span-2"
   },
   {
     title: "LADRILLO",
     subtitle: "Mas informacion",
-    image: "/img/ladrillo.jpg", // reemplazar por la imagen real
+    image: "/materiales-ryr/img/ladrillo.jpg", // reemplazar por la imagen real
     colSpan: "col-span-2"
   }
 ];

@@ -45,7 +45,7 @@ export default function Header({ onSectionClick }) {
         <div className="flex justify-between items-center px-4 sm:px-8 py-4">
           {/* Logo */}
           <img
-            src={scrolled ? "/img/logo_transparente.png" : "/img/logo_naranja.png"}
+            src={scrolled ? "/materiales-ryr/img/logo_transparente.png" : "/materiales-ryr/img/logo_naranja.png"}
             alt="Logo de JyR"
             className="w-28 sm:w-40 h-auto object-contain"
           />
@@ -112,7 +112,7 @@ export default function Header({ onSectionClick }) {
       <div className="relative w-full h-[60vh] pt-24" 
       style={{ 
         backgroundColor: "#263238", 
-        backgroundImage: "url(/img/header_main.jpg)", 
+        backgroundImage: "url(/materiales-ryr/img/header_main.jpg)", 
         backgroundSize: "cover", 
         backgroundPosition: "center", 
         filter: "grayscale(0.2) brightness(0.8)" }} ></div>
