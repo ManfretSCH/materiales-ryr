@@ -11,7 +11,7 @@ export default function App() {
   const [scrollTarget, setScrollTarget] = useState(null);
 
   return (
-    <Router>
+    <Router basename="/materiales-ryr/">
       <Routes>
         <Route
           path="/"
