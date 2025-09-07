@@ -4,7 +4,7 @@ export default function Footer() {
             <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
                 <div className="flex flex-col gap-2">
                     <span className="text-sm text-gray-700 dark:text-gray-300 font-semibold">
-                        © 2025 Ferretería RyR. Todos los derechos reservados.
+                        © 2025 Materiales de construcción RyR. Todos los derechos reservados.
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
                         ACOPLADOS SA, Av. San José, Limpio 110803
