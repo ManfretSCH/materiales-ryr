@@ -7,7 +7,7 @@ export default function Footer() {
                         © 2025 Materiales de construcción RyR. Todos los derechos reservados.
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                        ACOPLADOS SA, Av. San José, Limpio 110803
+                        ACOPLADOS SA, Av. San José, Limpio, camino piquete cue
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
                         Tel: <a href="tel:+5950982619263" className="hover:underline text-[#ffb300]">+595 0982619263</a> | Email: <a href="mailto:johanaramos4321@gmail.com" className="hover:underline text-[#ffb300]">johanaramos4321@gmail.com</a>
