@@ -81,7 +81,7 @@ export default function Contacto() {
                   <div>
                     <h4 className="font-semibold text-[#263238]">Teléfono</h4>
                     <a href="tel:+5950982619263" className="text-[#ffb300] hover:underline font-medium">
-                      +595 0982619263
+                      +595 0982505879
                     </a>
                   </div>
                 </div>
