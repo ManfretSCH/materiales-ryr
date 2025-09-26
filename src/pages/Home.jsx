@@ -96,7 +96,7 @@ export default function Home() {
             <p className="text-xl mb-6">Consulta con nuestros expertos y encuentra todo lo que necesitas</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="https://wa.me/5950982619263?text=Hola,%20necesito%20asesoría%20para%20mi%20proyecto"
+                href="https://wa.me/5950982505879?text=Hola,%20necesito%20asesoría%20para%20mi%20proyecto"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[#ffb300] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
