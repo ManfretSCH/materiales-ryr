@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-export default function Header({ onSectionClick }) {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -14,24 +14,18 @@ export default function Header({ onSectionClick }) {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", link: "/" },
-    { name: "Categoría", link: "#Categoría" },
-    { name: "Contacto", link: "#contacto" },
-    { name: "Nosotros", link: "/nosotros" },
+    { name: "Inicio", path: "/" },
+    { name: "Categorías", path: "/categorias" },
+    { name: "Contacto", path: "/contacto" },
+    { name: "Nosotros", path: "/nosotros" },
   ];
 
-  const handleNavClick = (name, link) => {
-    if (onSectionClick && typeof onSectionClick[name] === "function" && location.pathname === "/") {
-      onSectionClick[name]();
-      setMenuOpen(false);
-    } else if ((name === "Contacto" || name === "Categoría") && location.pathname !== "/") {
-      navigate("/", { state: { scrollTo: name } });
-      setMenuOpen(false);
-    } else if (link === "/" || link === "/nosotros") {
-      navigate(link);
-      setMenuOpen(false);
-    }
+  const handleNavClick = (path) => {
+    navigate(path);
+    setMenuOpen(false);
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <>
@@ -44,11 +38,13 @@ export default function Header({ onSectionClick }) {
       >
         <div className="flex justify-between items-center px-4 sm:px-8 py-4">
           {/* Logo */}
-          <img
-            src={scrolled ? "/materiales-ryr/img/logo_transparente.png" : "/materiales-ryr/img/logo_naranja.png"}
-            alt="Logo de JyR"
-            className="w-28 sm:w-40 h-auto object-contain"
-          />
+          <button onClick={() => navigate("/")} className="focus:outline-none">
+            <img
+              src="/img/logo_transparente.png"
+              alt="Logo RyR"
+              className="w-28 sm:w-40 h-auto object-contain"
+            />
+          </button>
 
           {/* Navegación escritorio */}
           <nav className="hidden md:block">
@@ -56,8 +52,14 @@ export default function Header({ onSectionClick }) {
               {navLinks.map((item) => (
                 <li key={item.name}>
                   <button
-                    onClick={() => handleNavClick(item.name, item.link)}
-                    className={`text-base font-semibold ${scrolled ? "text-[#263238]" : "text-[#f5f5f5]"} hover:text-[#ffb300]`}
+                    onClick={() => handleNavClick(item.path)}
+                    className={`text-base font-semibold transition-colors duration-300 px-3 py-2 rounded-lg ${
+                      isActive(item.path)
+                        ? "bg-[#ffb300] text-white"
+                        : scrolled 
+                        ? "text-[#263238] hover:text-[#ffb300]" 
+                        : "text-[#f5f5f5] hover:text-[#ffb300]"
+                    }`}
                   >
                     {item.name}
                   </button>
@@ -86,12 +88,16 @@ export default function Header({ onSectionClick }) {
           >
             &times;
           </button>
-          <ul className="flex flex-col gap-6 mt-20 px-8">
+          <ul className="flex flex-col gap-4 mt-20 px-8">
             {navLinks.map((item) => (
               <li key={item.name}>
                 <button
-                  onClick={() => handleNavClick(item.name, item.link)}
-                  className="text-lg font-semibold text-[#263238] hover:text-[#ffb300] transition-colors duration-300"
+                  onClick={() => handleNavClick(item.path)}
+                  className={`w-full text-left text-lg font-semibold py-3 px-4 rounded-lg transition-colors duration-300 ${
+                    isActive(item.path)
+                      ? "bg-[#ffb300] text-white"
+                      : "text-[#263238] hover:text-[#ffb300] hover:bg-gray-100"
+                  }`}
                 >
                   {item.name}
                 </button>
@@ -100,7 +106,7 @@ export default function Header({ onSectionClick }) {
           </ul>
         </nav>
 
-        {/* Fondo negro semitransparente al abrir menú */}
+        {/* Overlay del menú móvil */}
         {menuOpen && (
           <div
             className="fixed inset-0 bg-black/40 z-40"
@@ -108,14 +114,18 @@ export default function Header({ onSectionClick }) {
           />
         )}
       </div>
-      {/* Imagen del header solo en el 60% superior */} 
-      <div className="relative w-full h-[60vh] pt-24" 
-      style={{ 
-        backgroundColor: "#263238", 
-        backgroundImage: "url(/materiales-ryr/img/header_main.jpg)", 
-        backgroundSize: "cover", 
-        backgroundPosition: "center", 
-        filter: "grayscale(0.2) brightness(0.8)" }} ></div>
+
+      {/* Solo mostrar imagen de header si NO estamos en el home */}
+      {location.pathname !== "/" && (
+        <div className="relative w-full h-[40vh] pt-24 bg-gradient-to-r from-[#263238] to-[#37474f] flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">
+              {navLinks.find(link => link.path === location.pathname)?.name || "Página"}
+            </h1>
+            <p className="text-lg opacity-90">Materiales de Construcción RyR</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }
