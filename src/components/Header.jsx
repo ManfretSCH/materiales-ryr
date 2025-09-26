@@ -37,12 +37,12 @@ export default function Header() {
         }}
       >
         <div className="flex justify-between items-center px-4 sm:px-8 py-4">
-          {/* Logo */}
+          {/* Logo con cambio dinámico */}
           <button onClick={() => navigate("/")} className="focus:outline-none">
             <img
-              src="/materiales-ryr/img/logo_transparente.png"
+              src={scrolled ? "/img/logo_transparente.png" : "/img/logo.png"}
               alt="Logo RyR"
-              className="w-28 sm:w-40 h-auto object-contain"
+              className="w-28 sm:w-40 h-auto object-contain transition-all duration-300"
             />
           </button>
 
