@@ -80,7 +80,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#263238]">Teléfono</h4>
-                    <a href="tel:+5950982619263" className="text-[#ffb300] hover:underline font-medium">
+                    <a href="tel:+5950982505879" className="text-[#ffb300] hover:underline font-medium">
                       +595 0982505879
                     </a>
                   </div>
@@ -93,7 +93,7 @@ export default function Contacto() {
                   <div>
                     <h4 className="font-semibold text-[#263238]">WhatsApp</h4>
                     <a 
-                      href="https://wa.me/5950982619263?text=Hola,%20necesito%20información%20sobre%20productos" 
+                      href="https://wa.me/5950982505879?text=Hola,%20necesito%20información%20sobre%20productos" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#20BA5A] transition-colors"
