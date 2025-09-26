@@ -63,7 +63,7 @@ export default function Categorias() {
           <h3 className="text-2xl font-bold mb-4">¿No encuentras lo que buscas?</h3>
           <p className="text-lg mb-6">Contáctanos y te ayudamos a encontrar el producto perfecto para tu proyecto</p>
           <a 
-            href="https://wa.me/5950982619263?text=Hola,%20busco%20un%20producto%20específico"
+            href="https://wa.me/5950982505879?text=Hola,%20busco%20un%20producto%20específico"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-[#ffb300] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-block"
