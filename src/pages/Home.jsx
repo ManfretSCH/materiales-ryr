@@ -22,7 +22,7 @@ export default function Home() {
               Materiales RyR
             </h1>
             <p className="text-xl md:text-2xl mb-8 drop-shadow max-w-3xl">
-              Todo para tu construcción y proyectos. Más de 20 años construyendo confianza.
+              Todo para tu construcción y proyectos. Más de 5 años construyendo confianza.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
