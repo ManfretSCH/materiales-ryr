@@ -49,7 +49,7 @@ export default function Contacto() {
             <div className="flex flex-col justify-center space-y-6">
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold text-[#263238] mb-4">Materiales RyR</h3>
-                <p className="text-[#37474f] mb-6">Tu proveedor de confianza desde hace más de 20 años</p>
+                <p className="text-[#37474f] mb-6">Tu proveedor de confianza desde hace más de 5 años</p>
               </div>
 
               <div className="space-y-4">

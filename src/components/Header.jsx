@@ -40,7 +40,7 @@ export default function Header() {
           {/* Logo con cambio dinámico */}
           <button onClick={() => navigate("/")} className="focus:outline-none">
             <img
-              src={scrolled ? "/img/logo_transparente.png" : "/img/logo.png"}
+              src={scrolled ? "/materiales-ryr/img/logo_transparente.png" : "/materiales-ryr/img/logo_naranja.png"}
               alt="Logo RyR"
               className="w-28 sm:w-40 h-auto object-contain transition-all duration-300"
             />

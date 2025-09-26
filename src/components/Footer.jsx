@@ -10,7 +10,7 @@ export default function Footer() {
                         ACOPLADOS SA, Av. San José, Limpio, camino piquete cue
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                        Tel: <a href="tel:+5950982619263" className="hover:underline text-[#ffb300]">+595 0982619263</a> | Email: <a href="mailto:johanaramos4321@gmail.com" className="hover:underline text-[#ffb300]">johanaramos4321@gmail.com</a>
+                        Tel: <a href="tel:+5950982619263" className="hover:underline text-[#ffb300]">+595 0982505879</a> | Email: <a href="mailto:johanaramos4321@gmail.com" className="hover:underline text-[#ffb300]">johanaramos4321@gmail.com</a>
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
                         Horario: Lunes a Sábado 07:00 - 17:00

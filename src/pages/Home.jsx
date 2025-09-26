@@ -53,7 +53,7 @@ export default function Home() {
                 <i className="bi bi-people text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-bold mb-4 text-[#263238]">Atención Familiar</h3>
-              <p className="text-[#37474f]">Más de 20 años sirviendo a la comunidad con el trato personalizado que solo un negocio familiar puede ofrecer.</p>
+              <p className="text-[#37474f]">Más de 5 años sirviendo a la comunidad con el trato personalizado que solo un negocio familiar puede ofrecer.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
               <div className="bg-[#ffb300] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">

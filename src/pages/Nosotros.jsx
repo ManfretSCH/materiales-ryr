@@ -1,5 +1,3 @@
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
 
 export default function Nosotros() {
   return (
@@ -14,7 +12,7 @@ export default function Nosotros() {
             Sobre Nosotros
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Una historia de esfuerzo, dedicación y amor por la familia.
+            Una historia de esfuerzo y dedicación.
           </p>
         </section>
 
@@ -76,7 +74,7 @@ export default function Nosotros() {
             de construir juntos.
           </p>
           <p className="mt-6 text-lg text-gray-500 italic">
-            — Ever Ramos & Erika Ramos
+            — Ever Ramos & Erika Schroter
           </p>
         </section>
       </main>
