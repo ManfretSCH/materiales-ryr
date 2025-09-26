@@ -40,7 +40,7 @@ export default function Header() {
           {/* Logo */}
           <button onClick={() => navigate("/")} className="focus:outline-none">
             <img
-              src="/img/logo_transparente.png"
+              src="/materiales-ryr/img/logo_transparente.png"
               alt="Logo RyR"
               className="w-28 sm:w-40 h-auto object-contain"
             />
