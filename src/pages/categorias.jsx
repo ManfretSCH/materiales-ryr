@@ -23,7 +23,7 @@ export default function Categorias() {
               <div className="text-sm text-[#37474f]">Productos disponibles</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#ffb300] mb-2">20+</div>
+              <div className="text-3xl font-bold text-[#ffb300] mb-2">5+</div>
               <div className="text-sm text-[#37474f]">Años de experiencia</div>
             </div>
             <div>
