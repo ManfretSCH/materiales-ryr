@@ -19,7 +19,7 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-6">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-              Materiales RyR
+              Deposito de Materiales RyR
             </h1>
             <p className="text-xl md:text-2xl mb-8 drop-shadow max-w-3xl">
               Todo para tu construcción y proyectos. Más de 5 años construyendo confianza.

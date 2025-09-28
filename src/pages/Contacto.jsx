@@ -48,7 +48,7 @@ export default function Contacto() {
             {/* Información de contacto */}
             <div className="flex flex-col justify-center space-y-6">
               <div className="text-center md:text-left">
-                <h3 className="text-2xl font-bold text-[#263238] mb-4">Materiales RyR</h3>
+                <h3 className="text-2xl font-bold text-[#263238] mb-4">Deposito De Materiales RyR</h3>
                 <p className="text-[#37474f] mb-6">Tu proveedor de confianza desde hace más de 5 años</p>
               </div>
 
@@ -90,13 +90,13 @@ export default function Contacto() {
                   <div className="bg-[#25D366] p-3 rounded-full">
                     <i className="bi bi-whatsapp text-white text-xl"></i>
                   </div>
-                  <div>
+                  <div className="flex flex-col gap-2">
                     <h4 className="font-semibold text-[#263238]">WhatsApp</h4>
                     <a 
                       href="https://wa.me/5950982505879?text=Hola,%20necesito%20información%20sobre%20productos" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#20BA5A] transition-colors"
+                      className="bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#20BA5A] transition-colors text-sm inline-block w-fit"
                     >
                       Chatear ahora
                     </a>
