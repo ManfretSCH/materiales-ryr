@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Materiales RyR - Redirigiendo...</title>
+    <script type="text/javascript">
+      // Redirección para GitHub Pages con BrowserRouter
+      var pathSegmentsToKeep = 1; // Para /materiales-ryr/
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + 
+        '/?/' + 
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+      <h3>Redirigiendo...</h3>
+      <p>Si no eres redirigido automáticamente, <a href="/materiales-ryr/">haz clic aquí</a>.</p>
+    </div>
+  </body>
+</html>
